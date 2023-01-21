@@ -1,0 +1,6 @@
+- Para iniciar o projeto temos que rodar o comando "npm create vite@latest"
+- Na sequecia (dentro do projeto) rodamos um "npm install"
+
+- para configurar o Tailwindcss usei esse site: https://dev.to/thiagobaia/como-usar-o-tailwind-css-no-react-com-vite-1i7d
+
+

@@ -1,0 +1,17 @@
+Para rodar um servidar web estamos usando o Fastfy (parecido com o express)
+    - para rodar ele executamos "tsx watch src/server.ts" - está salvo como script para facilitar
+
+Como ORM da aplicação para acesso ao banco de dados vamos usar o Prisma
+    - para instalar o prisma na applicação usamos os comandos:
+        - "npm i -D prisma" - só será utilizado em ambiente de desenvolvimento
+        - "npm i @prisma/client" - esse é o cliente do prisma para usar em produção
+    - para iniciar o prisma usamos o comando " npx prisma init --datasource-provider SQLite "
+      esse comando inicializa o prisma e informa qual é o banco de dados que vamos usar.
+
+Após criar os schemas de tabelas no arquivo schema.prisma execute o comando:
+    - "npx prisma migrate dev" - para que o arquivo SQL seja gerado a partir do arquivo do prisma.
+    - na sequancia do comando dê um nome para sua migration
+
+Para acecssar o banco através do prisma, basta executar no terminal "npx prisma studio". Ele iraá abrir uma pag web
+para navegar pelo banco.
+

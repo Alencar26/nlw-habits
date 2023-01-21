@@ -1,9 +1,17 @@
 import Fastify from 'fastify'
+import cors from '@fastify/cors'
+import { PrismaClient } from '@prisma/client'
 
 const app = Fastify()
+const prisma = new PrismaClient()
 
-app.get('/', () => {
-    return 'Hello Word!'
+app.register(cors)
+
+app.get('/', async () => {
+
+    const habtis = await prisma.habit.findMany()
+
+    return habtis
 })
 
 app.listen({
@@ -11,5 +19,3 @@ app.listen({
 }).then(() => {
     console.log("HTTP server running on port 3333")
 });
-
-//TODO  parei no minuto 27:00 -> aula
